@@ -45,6 +45,14 @@ Onivim2-x86_64.AppImage --appimage-mount
 ```
 it will mount the app image and display a path under `/tmp/.mount_oniXXXXXXX` -> go to this directory, open `usr/bin` and try to run `Oni2_editor -f`, you can also run `ldd Oni2_editor` to see if there are missing dependencies (look for "not found" in the output).
 
+# Installing in system
+
+To install, 
+- move the Onivim appimage file to `/usr/local/bin/Oni2`. Also, to get it to show up in app menu and see the beautiful icon:
+- put [Onivim2.desktop](https://raw.githubusercontent.com/onivim/oni2/e849d67e8128bab99874bbb988bcf0f940c44262/scripts/linux/Onivim2.desktop) in `/usr/share/applications`
+- put [Onivim2.png](https://github.com/onivim/oni2/raw/e849d67e8128bab99874bbb988bcf0f940c44262/assets/images/logo.png) in `/usr/share/icons`
+
+
 Hope this works for you!
 
 Hit me up on Discord - nickname @MOss.
