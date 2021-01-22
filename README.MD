@@ -1,8 +1,10 @@
 # OniVim2 builder image
 
+Builder for [Onivim2](onivim.github.io/) app on Ubuntu 20.04 system.
+
 ## OniVim2 development support
 
-I am releasing this image to let you try out and maybe hack on Onivim2 to support it development. 
+I am releasing this image to let you try out and maybe hack on Onivim2 to support its development. 
 Yet please consider supporting the project financially: [you can support the project on Patreon or buy a License here](https://v2.onivim.io/early-access-portal).
 This is a complex project and needs a lot of work!
 
@@ -24,7 +26,17 @@ To build the image yourself from this repository:
 docker build -t onivim2-builder .  
 ```
 
+A succesful build ends with:
+```
+Marking the AppImage as executable...
+Embedding MD5 digest
+Success
+
+Please consider ....
+```
+
 After the build hopefully succeeds you will find AppImage in `$BUILD_DIRECTORY/oni2/_release/Onivim2-x86_64.AppImage`. Just `chmod +x` and run this file.
+
 
 If nothing happens (the app does not start), you can debug it by running:
 

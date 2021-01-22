@@ -1,5 +1,5 @@
 diff --git a/scripts/linux/package-linux.sh b/scripts/linux/package-linux.sh
-index d85e5a0..af04d8d 100755
+index d85e5a09..2b17f6e1 100755
 --- a/scripts/linux/package-linux.sh
 +++ b/scripts/linux/package-linux.sh
 @@ -3,7 +3,7 @@ echo "cur bin $cur__bin"
@@ -11,7 +11,7 @@ index d85e5a0..af04d8d 100755
  mkdir -p _staging
  
  cp -r $cur__bin _release/linux
-@@ -29,6 +29,7 @@ cp ThirdPartyLicenses.txt _release/Onivim2.AppDir/ThirdPartyLicenses.txt
+@@ -29,10 +29,12 @@ cp ThirdPartyLicenses.txt _release/Onivim2.AppDir/ThirdPartyLicenses.txt
  
  cp _release/linux/bin/*.* _release/Onivim2.AppDir/usr/bin
  cp _release/linux/bin/Oni2 _release/Onivim2.AppDir/usr/bin/Oni2
@@ -19,7 +19,12 @@ index d85e5a0..af04d8d 100755
  
  cp vendor/ripgrep-v0.10.0/linux/rg _release/Onivim2.AppDir/usr/bin/rg
  cp vendor/node-v14.15.4/linux-x64/node _release/Onivim2.AppDir/usr/bin/node
-@@ -42,5 +43,5 @@ cp -r node/ _release/Onivim2.AppDir/usr/share
+ cp vendor/reason-language-server/bin.native.linux _release/Onivim2.AppDir/usr/bin/rls
++cp $JPEG_LIB_PATH/* _release/Onivim2.AppDir/usr/lib
+ 
+ ls _release/Onivim2.AppDir/usr/share
+ 
+@@ -42,5 +44,5 @@ cp -r node/ _release/Onivim2.AppDir/usr/share
  
  rm -f _release/Onivim2.AppDir/usr/bin/setup.json
  
@@ -27,7 +32,7 @@ index d85e5a0..af04d8d 100755
 +ARCH=x86_64 _staging/appimagetool-x86_64.AppImage --appimage-extract-and-run _release/Onivim2.AppDir _release/Onivim2-x86_64.AppImage
  
 diff --git a/scripts/release.js b/scripts/release.js
-index 9d9fdfe..25c0ae7 100644
+index 9d9fdfee..25c0ae75 100644
 --- a/scripts/release.js
 +++ b/scripts/release.js
 @@ -118,7 +118,7 @@ const updateIcon = (rcedit, exe, iconFile) => {
