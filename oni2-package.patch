@@ -19,7 +19,6 @@ index 1f106a4..235fe31 100755
  
  cp vendor/ripgrep-v0.10.0/linux/rg _release/Onivim2.AppDir/usr/bin/rg
  cp vendor/node-v12.17.0/linux-x64/node _release/Onivim2.AppDir/usr/bin/node
- cp vendor/reason-language-server/bin.native.linux _release/Onivim2.AppDir/usr/bin/rls
 +cp $JPEG_LIB_PATH/* _release/Onivim2.AppDir/usr/lib
  
  ls _release/Onivim2.AppDir/usr/share
