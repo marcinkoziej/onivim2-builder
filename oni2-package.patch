@@ -1,5 +1,5 @@
 diff --git a/scripts/linux/package-linux.sh b/scripts/linux/package-linux.sh
-index fde6dcdf..9b75fc47 100755
+index 6d90092..036ebc7 100755
 --- a/scripts/linux/package-linux.sh
 +++ b/scripts/linux/package-linux.sh
 @@ -3,7 +3,7 @@ echo "cur bin $cur__bin"
@@ -18,9 +18,9 @@ index fde6dcdf..9b75fc47 100755
 +cp _release/linux/bin/Oni2_editor _release/Onivim2.AppDir/usr/bin/Oni2_editor
  
  cp vendor/ripgrep-v0.10.0/linux/rg _release/Onivim2.AppDir/usr/bin/rg
- cp vendor/node-v12.17.0/linux-x64/node _release/Onivim2.AppDir/usr/bin/node
+ cp vendor/node-v14.15.4/linux-x64/node _release/Onivim2.AppDir/usr/bin/node
++cp vendor/reason-language-server/bin.native.linux _release/Onivim2.AppDir/usr/bin/rls
 +cp $JPEG_LIB_PATH/* _release/Onivim2.AppDir/usr/lib
-+
  
  ls _release/Onivim2.AppDir/usr/share
  
@@ -32,7 +32,7 @@ index fde6dcdf..9b75fc47 100755
 +ARCH=x86_64 _staging/appimagetool-x86_64.AppImage --appimage-extract-and-run _release/Onivim2.AppDir _release/Onivim2-x86_64.AppImage
  
 diff --git a/scripts/release.js b/scripts/release.js
-index f39c930d..95da48d7 100644
+index 100be84..d0d4c97 100644
 --- a/scripts/release.js
 +++ b/scripts/release.js
 @@ -106,7 +106,7 @@ const updateIcon = (rcedit, exe, iconFile) => {
